@@ -20,7 +20,8 @@ let MainPage = () =>{
         <React.Fragment>
             <CssBaseline>
                 <Typography component="div" style={{ backgroundColor: '#f7f9fc', height: '100vh' }} >
-                    <TopBar/>        
+                    <TopBar/>
+                    <OptionBar/>
                 </Typography> 
             </CssBaseline>
         </React.Fragment>

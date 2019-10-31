@@ -7,7 +7,7 @@ let useStyles = makeStyles(theme =>({
     root:{
         width: 176,
         height: 40,
-        padding:10
+        padding: 4
     }
 }));
 
