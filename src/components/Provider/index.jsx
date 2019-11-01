@@ -12,3 +12,5 @@ let RootProvider = ({children}) =>{
         </RootContext.Provider>
     );
 }
+
+export default RootProvider;

@@ -1,10 +1,10 @@
 import React, { Children } from 'react';
-import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography'
 import TopBar from '../TopBar/index';
 import OptionBar from '../OptionBar/index';
 import CardSet from '../CardSet/index';
+import RootProvider from '../Provider/index';
 
 //topBar
 //optionBar
@@ -20,8 +20,11 @@ let MainPage = () =>{
         <React.Fragment>
             <CssBaseline>
                 <Typography component="div" style={{ backgroundColor: '#f7f9fc', height: '100vh' }} >
-                    <TopBar/>
-                    <OptionBar/>
+                    <RootProvider>
+                        <TopBar/>
+                        <OptionBar/>
+                        <CardSet/>
+                    </RootProvider>
                 </Typography> 
             </CssBaseline>
         </React.Fragment>

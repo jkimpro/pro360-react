@@ -5,28 +5,26 @@ import { createMuiTheme, ThemeProvider,makeStyles  } from '@material-ui/core/sty
 import SearchBar from './SearchContents/searchBar';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+
 import thumbImg from '../../media/topBarImages/thumbnail.png';
 import bellImg from '../../media/topBarImages/bell.png';
 import pencilImg from '../../media/topBarImages/pencil.png';
 import { borderRadius } from '@material-ui/system';
-
-const backTheme = createMuiTheme({
-    primary: {
-        main: '#ffffff',
-        height: 64,
-    }
-})
+import './barPrimaryOption.css';
 
 const useStyle = makeStyles(theme =>({
     root:{
-        [theme.breakpoints.up('xs')]: {
-            marginLeft:10
+        [theme.breakpoints.down('xs')]: {
+            marginLeft:10,
+            display: "none"
         },
-        [theme.breakpoints.up('sm')]: {
-            marginLeft:40
+        [theme.breakpoints.down('sm')]: {
+            marginLeft:40,
+            display: "none"
         },
-        [theme.breakpoints.up('md')]: {
-            marginLeft:80
+        [theme.breakpoints.down('md')]: {
+            marginLeft:80,
+            display: "none"
         },
         [theme.breakpoints.up('lg')]: {
             marginLeft:100
@@ -34,6 +32,9 @@ const useStyle = makeStyles(theme =>({
         [theme.breakpoints.only('xl')]: {
             marginLeft:355
         }
+    },
+    main:{
+        background:'#ffffff',
     },
     todolistBtn:{
         font: 'SFProText',
@@ -64,12 +65,13 @@ const useStyle = makeStyles(theme =>({
 }));
 
 let TopBar = () =>{
-    let backGroundColor = backTheme.primary.main;
+  //  let backGroundColor = backTheme.primary.main;
     let style = useStyle();
 
     return(
-        <ThemeProvider theme={backTheme}>
-            <AppBar position="static" color={backGroundColor}>
+        // <ThemeProvider theme={backTheme}>
+            <AppBar className="AppBar">
+                <Box color={style.main.background}>
                 <Toolbar>   
                     <Logo/>
                     <SearchBar/>
@@ -81,8 +83,9 @@ let TopBar = () =>{
                         {/* 버튼 크기 조정필요할때는 IconButton 사용 -> 그냥 버튼으로는 아무 소용없음. */}
                     </Box>
                 </Toolbar>
+                </Box>
             </AppBar>
-        </ThemeProvider>
+        // </ThemeProvider>
     );
 }
 

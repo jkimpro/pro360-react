@@ -25,15 +25,14 @@ const useBarStyles = makeStyles(theme => ({
   }));
 
 let SearchBar = ({colorStyle}) =>{
-
     let barStyle = useBarStyles();
     return(
-        <Paper className={barStyle.root} fixed>
-            <Button fixed> 
+        <Paper className={barStyle.root}>
+            <Button> 
                 <img src = {SearchImage}></img>
             </Button>
             <SearchInput ></SearchInput>
-            <Button fixed> <img src = {SettingImage}></img>  </Button>
+            <Button> <img src = {SettingImage}></img>  </Button>
         </Paper>
     )
 }
