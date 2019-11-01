@@ -1,3 +1,11 @@
 import React from 'react';
 
-let CardButton
+let CardBottom = () =>{
+    return(
+        <>
+        </>
+   
+    );
+}
+
+export default CardBottom;
