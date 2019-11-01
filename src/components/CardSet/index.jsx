@@ -5,13 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-let CardSet = ({}) => {
+let CardSet = () => {
     let [data, ] = React.useState();
 
     return(
     <>
         <CssBaseline />
-        <Container maxWidth="xl">
+        <Container maxWidth="xxl">
             <Grid
                 container
                 justify="flex-start"

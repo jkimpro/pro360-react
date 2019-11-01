@@ -8,16 +8,16 @@ import { makeStyles,withStyles  } from '@material-ui/core/styles';
 import cameraImage from '../../media/secondBarImages/camera.png';
 import excelImage from '../../media/secondBarImages/excelIcon.png';
 
-
 const useStyles = makeStyles(theme =>({
     root:{
         minWidth:1024,
         height: 56,
-        backgroundColor:'#ffffff', //나중에 context로 재조정
+        backgroundColor:'#ffffff',  //나중에 context로 재조정
         marginTop:64,
     },
+
     leftBox:{
-        width: "100%",
+        width: "50%",
         height: 56,     
         alignItems:"center"
     },
@@ -43,7 +43,6 @@ const useStyles = makeStyles(theme =>({
         letterSpacing:-0.37
     }
 }));
-
 
 let OptionBar = () =>{
     const barStyle = useStyles();

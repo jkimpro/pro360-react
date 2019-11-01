@@ -14,24 +14,10 @@ import './barPrimaryOption.css';
 
 const useStyle = makeStyles(theme =>({
     root:{
-        [theme.breakpoints.down('xs')]: {
-            marginLeft:10,
-            display: "none"
-        },
-        [theme.breakpoints.down('sm')]: {
-            marginLeft:40,
-            display: "none"
-        },
+        width:'48%',
         [theme.breakpoints.down('md')]: {
-            marginLeft:80,
             display: "none"
         },
-        [theme.breakpoints.up('lg')]: {
-            marginLeft:100
-        },
-        [theme.breakpoints.only('xl')]: {
-            marginLeft:355
-        }
     },
     main:{
         background:'#ffffff',
@@ -42,9 +28,9 @@ const useStyle = makeStyles(theme =>({
         fontSize: 14,
     },
     qnaBtn:{
-        marginLeft:8,
         background:'#0062ff',
         borderRadius:4,
+        marginLeft:8,
         font: 'SFProText',
         fontSize: 14,
         color: 'white'
@@ -52,7 +38,7 @@ const useStyle = makeStyles(theme =>({
     bellBtn:{
         width:48,
         height:48,
-        marginLeft:8,
+        marginLeft:11,
         padding: theme.spacing(0, 0),
         alignItems:"center"
     },
@@ -60,6 +46,7 @@ const useStyle = makeStyles(theme =>({
         width:48,
         height:48,
         padding: theme.spacing(0, 0),
+        marginLeft:8,
         alignItems:"center"
     }
 }));
@@ -72,14 +59,16 @@ let TopBar = () =>{
         // <ThemeProvider theme={backTheme}>
             <AppBar className="AppBar">
                 <Box color={style.main.background}>
-                <Toolbar>   
+                <Toolbar> 
                     <Logo/>
                     <SearchBar/>
-                    <Box className={style.root}>
-                        <Button className={style.todolistBtn}> 배포 및 To Do List </Button>
-                        <Button className={style.qnaBtn}> <img src={pencilImg}></img> 문의/개선사항 접수 </Button>
-                        <IconButton className={style.bellBtn}> <img src={bellImg}></img></IconButton>        
+                    {/* className={style.root} */}
+                    <Box display="flex" flexDirection="row-reverse" className={style.root}>
                         <IconButton className={style.thumbBtn}> <img src={thumbImg}></img></IconButton>
+                        <IconButton className={style.bellBtn}> <img src={bellImg}></img></IconButton>        
+                        <Button className={style.qnaBtn}> <img src={pencilImg}></img> 문의/개선사항 접수 </Button>
+                        <Button className={style.todolistBtn}> 배포 및 To Do List </Button>
+                    
                         {/* 버튼 크기 조정필요할때는 IconButton 사용 -> 그냥 버튼으로는 아무 소용없음. */}
                     </Box>
                 </Toolbar>

@@ -24,7 +24,7 @@ const useBarStyles = makeStyles(theme => ({
     },
   }));
 
-let SearchBar = ({colorStyle}) =>{
+let SearchBar = () =>{
     let barStyle = useBarStyles();
     return(
         <Paper className={barStyle.root}>
