@@ -2,20 +2,20 @@ import React from 'react';
 import ImgLookBar from './imgLookBar';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import { Toolbar, IconButton} from '@material-ui/core';
+import {Appbar, Toolbar, IconButton} from '@material-ui/core';
 import { makeStyles,withStyles  } from '@material-ui/core/styles';
 
 import cameraImage from '../../media/secondBarImages/camera.png';
 import excelImage from '../../media/secondBarImages/excelIcon.png';
 
 const useStyles = makeStyles(theme =>({
+
     root:{
         minWidth:1024,
         height: 56,
         backgroundColor:'#ffffff',  //나중에 context로 재조정
         marginTop:64,
     },
-
     leftBox:{
         width: "50%",
         height: 56,     
@@ -47,17 +47,19 @@ const useStyles = makeStyles(theme =>({
 let OptionBar = () =>{
     const barStyle = useStyles();
     return(
-        <Box className={barStyle.root}>
-            <Toolbar>   
-                <Box display="flex" flexDirection="row" className={barStyle.leftBox}>
-                    <ImgLookBar/>
-                </Box>
-                <Box display="flex" flexDirection="row-reverse" className={barStyle.rightBox}>
-                    <Button className={barStyle.excelBtn}> <img src={excelImage}></img>&nbsp;엑셀 다운로드</Button>
-                    <Button className={barStyle.captureBtn}> <img src={cameraImage}></img>&nbsp;화면 캡쳐</Button>
-                </Box>
-            </Toolbar>
-        </Box>
+        <>
+            <Box className={barStyle.root}>
+                <Toolbar>   
+                    <Box display="flex" flexDirection="row" className={barStyle.leftBox}>
+                        <ImgLookBar/>
+                    </Box>
+                    <Box display="flex" flexDirection="row-reverse" className={barStyle.rightBox}>
+                        <Button className={barStyle.excelBtn}> <img src={excelImage}></img>&nbsp;엑셀 다운로드</Button>
+                        <Button className={barStyle.captureBtn}> <img src={cameraImage}></img>&nbsp;화면 캡쳐</Button>
+                    </Box>
+                </Toolbar>
+            </Box>
+        </>
     )
 }
 

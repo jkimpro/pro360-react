@@ -5,6 +5,7 @@ import TopBar from '../TopBar/index';
 import OptionBar from '../OptionBar/index';
 import CardSet from '../CardSet/index';
 import RootProvider from '../Provider/index';
+import SortingBar from '../SortingBar';
 
 //topBar
 //optionBar
@@ -23,6 +24,7 @@ let MainPage = () =>{
                     <RootProvider>
                         <TopBar/>
                         <OptionBar/>
+                        <SortingBar/>
                         <CardSet/>
                     </RootProvider>
                 </Typography> 

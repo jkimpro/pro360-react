@@ -9,8 +9,7 @@ let CardSet = () => {
     let [data, ] = React.useState();
 
     return(
-    <>
-        <CssBaseline />
+        <>
         <Container maxWidth="xxl">
             <Grid
                 container
@@ -30,7 +29,7 @@ let CardSet = () => {
                 <ProductCard></ProductCard>
             </Grid>
         </Container>
-    </>
+        </>
     );
 }
 
