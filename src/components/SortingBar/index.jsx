@@ -21,6 +21,16 @@ let useStyles = makeStyles(theme =>({
         minWidth:1024,
         height: 56,
     },
+    leftBox:{
+        width: "50%",
+        height: 56,     
+        alignItems:"center"
+    },
+    rightBox:{
+        width: "100%",
+        height: 56,     
+        alignItems:"center"
+    },
 }));
 
 let SortingBar = () =>{
@@ -30,7 +40,7 @@ let SortingBar = () =>{
         <>
         <Box className={barStyle.root}>
             <Toolbar>   
-                <Box display="flex" flexDirection="row">
+                <Box display="flex" flexDirection="row" className={barStyle.leftBox}>
                     <SortButton optionName={"판매량순"} />
                     <SortButton optionName={"업체순"} />
                     <SortButton optionName={"브랜드순"} />
@@ -38,8 +48,10 @@ let SortingBar = () =>{
                     <SortButton optionName={"UV"} />
                     <SortButton optionName={"CR"} />
                 </Box>
-                <Box display="flex" flexDirection="row-reverse">
+                <Box display="flex" flexDirection="row-reverse" className={barStyle.rightBox}>
                     <SelectMenu/>
+                    <SelectMenu/>
+                    
                     {/* <SelectMenu/> */}
                 </Box>
             </Toolbar>
