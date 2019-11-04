@@ -8,15 +8,22 @@ import Grid from '@material-ui/core/Grid';
 let CardSet = () => {
     let [data, ] = React.useState();
 
+    if(data.length ===0){
+        return(
+            <>
+            </>
+        )
+    }
     return(
         <>
-        <Container maxWidth="xxl">
+        <Container maxWidth="xl">
             <Grid
                 container
                 justify="flex-start"
                 direction="row"
                 alignItems="center"
             >
+
                 <ProductCard></ProductCard>
                 <ProductCard></ProductCard>
                 <ProductCard></ProductCard>

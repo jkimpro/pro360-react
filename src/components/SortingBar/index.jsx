@@ -6,15 +6,22 @@ import {makeStyles} from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
 import SelectMenu from './selectMenu';
+import CheckIcon from '../../media/selectImages/checkIcon.png';
+import DropDownIcon from '../../media/selectImages/dropDownIcon.png';
 
-
-const optionList = [
-    '50개씩보기',
-    '100개씩보기',
-    '200개씩보기',
-    '300개씩보기'
+const numList = [
+    '50 개씩 보기',
+    '100 개씩 보기',
+    '200 개씩 보기',
+    '300 개씩 보기'
 ];
 
+const optionList = [
+    '필터',
+    '1',
+    '2',
+    '3'
+];
 
 let useStyles = makeStyles(theme =>({
     root:{
@@ -49,9 +56,9 @@ let SortingBar = () =>{
                     <SortButton optionName={"CR"} />
                 </Box>
                 <Box display="flex" flexDirection="row-reverse" className={barStyle.rightBox}>
-                    <SelectMenu/>
-                    <SelectMenu/>
-                    
+                    <SelectMenu value={optionList} dropDown={DropDownIcon} check={CheckIcon}/>
+                    <SelectMenu value={numList} dropDown={DropDownIcon} check={CheckIcon}/>
+            
                     {/* <SelectMenu/> */}
                 </Box>
             </Toolbar>
