@@ -4,19 +4,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 
 let CardSet = () => {
     let [data, ] = React.useState();
 
-    // if(){
-    //     return(
-    //         <>
-    //         </>
-    //     )
-    // }
     return(
         <>
-        <Container maxWidth="xl" mt={2}>
+        <Container maxWidth="xl">
             <Grid
                 container
                 justify="flex-start"
