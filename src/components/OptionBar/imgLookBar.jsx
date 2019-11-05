@@ -66,7 +66,7 @@ let ImgLookBar = () =>{
           value={value}
           onChange={handleChange}
           aria-label="action tabs example"
-        >
+          >
             <AntTab  label="기본 이미지 보기" {...a11yProps(0)} />
             <AntTab  label="모바일 배너로 보기" {...a11yProps(1)} />
         </AntTabs >

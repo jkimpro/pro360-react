@@ -49,7 +49,7 @@ let OptionBar = () =>{
     return(
         <>
             <Box className={barStyle.root}>
-                <Toolbar>   
+                <Toolbar>
                     <Box display="flex" flexDirection="row" className={barStyle.leftBox}>
                         <ImgLookBar/>
                     </Box>
