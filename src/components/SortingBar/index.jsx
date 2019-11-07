@@ -42,13 +42,11 @@ let useStyles = makeStyles(theme =>({
 }));
 
 let SortingBar = () =>{
-    
     let barStyle = useStyles();
     return (
         <>
         <Box className={barStyle.root}>
             <Toolbar>
-                <OptionProvider>
                     <Box display="flex" flexDirection="row" className={barStyle.leftBox}>
                         <SortButton optionName={"판매량순"} />
                         <SortButton optionName={"업체순"} />
@@ -57,7 +55,6 @@ let SortingBar = () =>{
                         <SortButton optionName={"UV"} />
                         <SortButton optionName={"CR"} />
                     </Box>    
-                </OptionProvider>   
                 <Box display="flex" flexDirection="row-reverse" className={barStyle.rightBox}>
                     <SelectMenu value={optionList} dropDown={DropDownIcon} check={CheckIcon}/>
                     <SelectMenu value={numList} dropDown={DropDownIcon} check={CheckIcon}/>

@@ -7,19 +7,13 @@ import CardMiddle from './cardMiddle';
 import CardBottom from './cardBottom';
 
 
-
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
 const useStyles = makeStyles(theme => ({
     card: {
       width:326,
       height:490,
       boxShadow: "0 2px 8px 0 rgba(0, 0, 0, 0.12)",
       backgroundColor: "#ffffff",
-      marginTop: 15,
+      marginTop: 28,
       marginRight:24
     },
     divider:{
@@ -45,20 +39,33 @@ const useStyles = makeStyles(theme => ({
     },
 }));
   
-let ProductCard = ({isMoblie}) =>{
+let ProductCard = ({value}) =>{
 
     let style = useStyles();
+                 
+    let topData = [value.prd_cd, value.sup_nm, value.prd_nm, value.ec_expos_prd_nm];
+    let middleData = [value.prd_sale_prc,
+      value.sup_giv_amt,
+      value.margn_rt,
+      value.tot_ord_qty,
+      value.tot_ord_amt,
+      value.net_ord_amt,
+      value.expct_sal_amt,
+      value.daily_uv,
+      value.daily_cr
+    ];
+    console.log(topData);
+
     return(
         <Card className={style.card}>
             <div className={style.divider}/>
+            <CardTop key={value.prd_cd} value={topData}/>
 
-            <CardTop/>
-            
             <Box display="flex" className={style.divider}>
               <div className={style.line}></div>
             </Box>
-
-            <CardMiddle/>
+            
+            <CardMiddle key={value.prd_sale_prc} value={middleData}/>
             <Box display="flex" className={style.divider}>
               <div className={style.line}></div>
             </Box>

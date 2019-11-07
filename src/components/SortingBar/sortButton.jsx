@@ -3,6 +3,7 @@ import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
 
+
 const BootstrapButton = withStyles({
   root: {
     boxShadow: 'none',
@@ -83,13 +84,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 let SortButton = ({optionName}) => {
+  
+  //const [option, setOption] = React.useContext();
+
   const classes = useStyles();
   
   return (
-    
       <ColorButton variant="contained" className={classes.margin}>
         {optionName}
       </ColorButton>
   );
+
 }
-export default SortButton
+export default SortButton;

@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
 
-let RootContext = React.createContext();
+const CardContext = React.createContext();
 
-let RootProvider = ({children}) =>{
-    
-    let [item, setItem] = React.useState();
-    let context = {item, setItem};
+
+const CardProvider = ({ children }) => {
+    const [cardData, setCardData] = useState([]);
     return (
-        <RootContext.Provider value = {context}>
+        <CardContext.Provider value={[cardData, setCardData]}>
             {children}
-        </RootContext.Provider>
+        </CardContext.Provider>
     );
-}
+};
 
-export default RootProvider;
+export {CardContext,CardProvider};

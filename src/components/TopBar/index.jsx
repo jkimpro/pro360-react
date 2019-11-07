@@ -52,11 +52,9 @@ const useStyle = makeStyles(theme =>({
 }));
 
 let TopBar = () =>{
-  //  let backGroundColor = backTheme.primary.main;
     let style = useStyle();
 
     return(
-        // <ThemeProvider theme={backTheme}>
             <AppBar className="AppBar">
                 <Box color={style.main.background}>
                 <Toolbar> 
@@ -74,7 +72,6 @@ let TopBar = () =>{
                 </Toolbar>
                 </Box>
             </AppBar>
-        // </ThemeProvider>
     );
 }
 

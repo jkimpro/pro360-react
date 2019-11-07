@@ -4,29 +4,20 @@ import Typography from '@material-ui/core/Typography'
 import TopBar from '../TopBar/index';
 import OptionBar from '../OptionBar/index';
 import CardSet from '../CardSet/index';
-import RootProvider from '../Provider/index';
+import {CardProvider} from '../Provider/index';
 import SortingBar from '../SortingBar';
-
-//topBar
-//optionBar
-//cardSet
-{/* <OptionBar/>
-<CardSet/> 
-<Container maxWidth="1000" css="padding:0px 0px; margin:0px 0px 0px 0px">
-                    
-*/}
 
 let MainPage = () =>{
     return (
         <React.Fragment>
             <CssBaseline>
                 <Typography component="div" style={{ backgroundColor: '#f7f9fc', height: '100vh' }} >
-                    <RootProvider>
+                    <CardProvider>
                         <TopBar/>
                         <OptionBar/>
                         <SortingBar/>
                         <CardSet/>
-                    </RootProvider>
+                    </CardProvider>
                 </Typography> 
             </CssBaseline>
         </React.Fragment>

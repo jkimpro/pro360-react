@@ -1,4 +1,6 @@
 import React from 'react';
+import $ from 'jquery';
+import {formatNumber} from './api';
 import {makeStyles, withStyles} from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -26,10 +28,15 @@ const useStyles = makeStyles(theme =>({
     }
 }));
 
+//main system call the name all the send setText();
+//AS MAIN IS THE CALL ON IT
+
 const useDetailStyles = makeStyles(theeme=>({
     prdCode:{
-        width: '100%',
-    
+        width: 190,
+        height: 14,
+        textOverflow:'ellipsis',
+        overflow:'hidden',
         marginTop:8,
         marginBottom:4,
         fontFamily: 'SFProText',
@@ -42,7 +49,11 @@ const useDetailStyles = makeStyles(theeme=>({
         color: '#323c51', 
     },
     compName:{
-        width: '100%',
+        width: 190,
+        height: 18,
+        textOverflow:'ellipsis',
+        overflow:'hidden',
+      
         fontFamily: 'AppleSDGothicNeo',
         fontSize: 12,
         fontWeight: 600,
@@ -54,8 +65,11 @@ const useDetailStyles = makeStyles(theeme=>({
     
     },
     prdName:{
-        width: '100%',
-    
+        width: 190,
+        height: 24,
+        textOverflow:'ellipsis',
+        overflow:'hidden',
+      
         fontFamily: 'AppleSDGothicNeo',
         fontSize: 16,
         fontWeight: 'normal',
@@ -66,8 +80,10 @@ const useDetailStyles = makeStyles(theeme=>({
         color: '#1b2334'
     },
     prdSub:{
-        width: '100%',
-    
+        width: 190,
+        height:20,
+        textOverflow:'ellipsis',
+        overflow:'hidden',
         fontFamily: 'SFProText',
         fontSize: 13,
         fontWeight: 'normal',
@@ -79,28 +95,22 @@ const useDetailStyles = makeStyles(theeme=>({
     },
 }));
 
-
-let CardTop = ({data}) =>{
+let CardTop = ({value}) =>{
     const style = useStyles();
     const detailStyle = useDetailStyles();
-
-    //data에서 분리할 것
-    let prd_code = "34181899";
-    let comp_name = "올리비아비  / 주식회사 세정글로벌";
-    let prd_name = "[몬테밀라노] 몬테밀라노";
-    let prd_sub = "[OLIVIA.B] 레인 드롭 후드...";
-
+    let imageUrl = `http://image.gsshop.com/image/${String(value[0]).substring(0, 2)}/${String(value[0]).substring(2, 4)}/${value[0]}${$(".nav-link.active").attr('id') === 'pc'? '_N1.jpg':'_B1.jpg'}`;
+  
     return(
         <>
             <Box className={style.root} display="flex">
                 <Box className = {style.leftBox}display="flex" flexDirection="row-reverse">
-                    <img src = {SampleImg} className={style.imgBox}></img> 
+                    <img src = {imageUrl} className={style.imgBox}></img> 
                 </Box>
                 <Box className = {style.rightBox}>
-                    <Box className={detailStyle.prdCode}>상품코드: {prd_code}</Box>
-                    <Box className={detailStyle.compName}>{comp_name}</Box>
-                    <Box className={detailStyle.prdName}>{prd_name}</Box>
-                    <Box className={detailStyle.prdSub}>{prd_sub}</Box>
+                    <Box className={detailStyle.prdCode}>상품코드: {value[0]}</Box>
+                    <Box className={detailStyle.compName}>{value[1]}</Box>
+                    <Box className={detailStyle.prdName}>{value[2]}</Box>
+                    <Box className={detailStyle.prdSub}>{value[3]}</Box>
                 </Box>
             </Box>
         </>
