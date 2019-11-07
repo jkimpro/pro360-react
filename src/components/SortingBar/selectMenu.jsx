@@ -20,7 +20,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 let SelectMenu = ({value, dropDown, check}) =>{
-
     const options = value;
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -71,6 +70,7 @@ let SelectMenu = ({value, dropDown, check}) =>{
         </ListItem>
       </Button> */}
       <Menu
+        id="lock-menu"
         elevation={0}
         anchorOrigin={{
           vertical: 'top',
@@ -80,7 +80,6 @@ let SelectMenu = ({value, dropDown, check}) =>{
           vertical: 'top',
           horizontal: 'top',
         }}
-        id="lock-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}

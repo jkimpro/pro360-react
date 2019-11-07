@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 
 let CardMiddle = () =>{
     
-    return(     
+    return(     //테이블 배치 예정
         <>
             <Box>
             </Box>
