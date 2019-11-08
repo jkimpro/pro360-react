@@ -57,10 +57,8 @@ const useStyles = makeStyles(theme =>({
         fontFamily: 'AppleSDGothicNeo',
         fontSize: 13,
         fontWeight: 600,
-        
         fontStretch: 'normal',
         fontStyle:'normal',
-
         lineHeight: 1.54,
         letterSpacing: -0.35,
         color: 'rgba(50, 60, 81, 0.6)',
@@ -73,7 +71,6 @@ const useStyles = makeStyles(theme =>({
         fontWeight: 'normal',
         fontStretch: 'normal',
         fontStyle: 'normal',
-        
         lineHeight: 1.43,
         letterSpacing: -0.37,
         color: '#1b2334'   

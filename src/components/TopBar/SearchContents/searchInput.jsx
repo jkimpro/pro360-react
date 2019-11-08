@@ -9,17 +9,17 @@ const useStyle = makeStyles(theme => ({
         height:26,
         marginTop: 5,
         marginLeft: 5,
-        [theme.breakpoints.up('xs')]: {
-            width: 100
-        },
-        [theme.breakpoints.up('sm')]: {
+        // [theme.breakpoints.up('xs')]: {
+        //     width: 100
+                // },
+        [theme.breakpoints.down('sm')]: {
             width: 200
         },
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.between('md', 'lg')]: {
             width: 500
         },
         [theme.breakpoints.up('lg')]: {
-            width: 700
+            width: 800
         },
     },
   }));

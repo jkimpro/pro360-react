@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
       boxShadow: "0 2px 8px 0 rgba(0, 0, 0, 0.12)",
       backgroundColor: "#ffffff",
       marginTop: 28,
-      marginRight:24
+      marginLeft: 12,
+      marginRight:12
     },
     divider:{
       width: 326,

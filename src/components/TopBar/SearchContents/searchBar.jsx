@@ -4,7 +4,10 @@ import {CardContext} from '../../Provider/index';
 import SearchInput from './searchInput';
 import SearchImage from '../../../media/topBarImages/searchIcon.png';
 import SettingImage from '../../../media/topBarImages/settingIcon.png';
+
 import Data from '../../../mockTable.json';
+
+
 import Box from '@material-ui/core/Box';
 
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
