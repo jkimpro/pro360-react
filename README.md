@@ -1,4 +1,4 @@
-# pro360-react
+# pro360-react-ui
 
 prototype of product360 page (react version)
 
